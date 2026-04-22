@@ -387,7 +387,7 @@ h4 { font-size: 1.1rem; font-weight: 700; }
 .nav-toggle.active span:nth-child(2) { opacity: 0; }
 .nav-toggle.active span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
 
-/* ============ Hero — Editorial ============ */
+/* ============ Hero — Editorial w/ Photo BG ============ */
 .hero {
     position: relative;
     padding: 100px 0 0;
@@ -397,18 +397,41 @@ h4 { font-size: 1.1rem; font-weight: 700; }
     display: flex;
     flex-direction: column;
     justify-content: center;
+    isolation: isolate;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0.85) 100%),
+      url('images/hero-bg.png') center / cover no-repeat;
+    z-index: -2;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 50% 50%, transparent 0%, rgba(0, 0, 0, 0.5) 70%),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.5) 100%);
+    z-index: -1;
+    pointer-events: none;
 }
 
 .hero-bg-grid {
     position: absolute;
     inset: 0;
     background-image:
-      linear-gradient(rgba(253, 216, 53, 0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(253, 216, 53, 0.04) 1px, transparent 1px);
+      linear-gradient(rgba(253, 216, 53, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(253, 216, 53, 0.06) 1px, transparent 1px);
     background-size: 80px 80px;
     mask-image: radial-gradient(ellipse at 50% 50%, black 30%, transparent 75%);
     -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 30%, transparent 75%);
     pointer-events: none;
+    opacity: 0.6;
 }
 
 .hero-glow-stripe {
@@ -419,7 +442,7 @@ h4 { font-size: 1.1rem; font-weight: 700; }
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--yellow-500) 30%, var(--yellow-500) 70%, transparent);
     box-shadow: 0 0 80px var(--yellow-glow), 0 0 160px var(--yellow-glow);
-    opacity: 0.4;
+    opacity: 0.5;
     pointer-events: none;
 }
 
