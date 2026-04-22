@@ -33,7 +33,7 @@
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="#home" class="nav-logo">
-                <img src="images/logo.png" alt="Xotic Auto Sound" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                <img src="images/logo.svg" alt="Xotic Auto Sound" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
                 <div class="logo-text" style="display:none">
                     <span class="logo-name">Xotic</span>
                     <span class="logo-sub">Auto Sound</span>
@@ -196,22 +196,49 @@
         <div class="container about-grid">
             <div class="about-visual">
                 <div class="about-frame">
-                    <span class="about-corner-tag">Since 2014</span>
-                    <div class="car-silhouette">
-                        <svg viewBox="0 0 400 140" fill="currentColor" style="color: var(--text)">
-                            <path d="M30 100 Q40 70 90 65 L130 50 Q160 40 200 38 Q240 38 280 48 L320 60 Q360 65 380 90 L385 105 Q385 115 375 115 L335 115 Q330 130 315 130 Q300 130 295 115 L115 115 Q110 130 95 130 Q80 130 75 115 L40 115 Q25 115 25 105 L30 100 Z" fill="currentColor"/>
-                            <path d="M140 65 L160 50 L210 48 L235 52 L235 65 Z" fill="#000" stroke="currentColor" stroke-width="2"/>
-                            <path d="M240 65 L240 52 L275 55 L295 65 Z" fill="#000" stroke="currentColor" stroke-width="2"/>
-                            <circle cx="95" cy="115" r="14" fill="#0a0a0a" stroke="currentColor" stroke-width="2"/>
-                            <circle cx="95" cy="115" r="6" fill="var(--yellow-500)" style="fill: #fdd835"/>
-                            <circle cx="315" cy="115" r="14" fill="#0a0a0a" stroke="currentColor" stroke-width="2"/>
-                            <circle cx="315" cy="115" r="6" fill="var(--yellow-500)" style="fill: #fdd835"/>
+                    <span class="about-corner-tag">Live Audio</span>
+
+                    <!-- Animated Audio Visualizer -->
+                    <div class="audio-visualizer">
+                        <!-- Outer pulsing rings -->
+                        <div class="viz-ring viz-ring-3"></div>
+                        <div class="viz-ring viz-ring-2"></div>
+                        <div class="viz-ring viz-ring-1"></div>
+
+                        <!-- Circular EQ bars (frequency spectrum) -->
+                        <div class="viz-spectrum">
+                            <span style="--i:0"></span><span style="--i:1"></span><span style="--i:2"></span><span style="--i:3"></span>
+                            <span style="--i:4"></span><span style="--i:5"></span><span style="--i:6"></span><span style="--i:7"></span>
+                            <span style="--i:8"></span><span style="--i:9"></span><span style="--i:10"></span><span style="--i:11"></span>
+                            <span style="--i:12"></span><span style="--i:13"></span><span style="--i:14"></span><span style="--i:15"></span>
+                            <span style="--i:16"></span><span style="--i:17"></span><span style="--i:18"></span><span style="--i:19"></span>
+                            <span style="--i:20"></span><span style="--i:21"></span><span style="--i:22"></span><span style="--i:23"></span>
+                            <span style="--i:24"></span><span style="--i:25"></span><span style="--i:26"></span><span style="--i:27"></span>
+                            <span style="--i:28"></span><span style="--i:29"></span><span style="--i:30"></span><span style="--i:31"></span>
+                            <span style="--i:32"></span><span style="--i:33"></span><span style="--i:34"></span><span style="--i:35"></span>
+                        </div>
+
+                        <!-- Center speaker -->
+                        <div class="viz-speaker">
+                            <div class="viz-speaker-cone">
+                                <div class="viz-speaker-dust"></div>
+                            </div>
+                        </div>
+
+                        <!-- Floating waveform -->
+                        <svg class="viz-wave" viewBox="0 0 400 60" preserveAspectRatio="none">
+                            <path d="M0 30 Q25 5 50 30 T100 30 T150 30 T200 30 T250 30 T300 30 T350 30 T400 30" stroke="#fdd835" stroke-width="2" fill="none" opacity="0.4"/>
+                            <path d="M0 30 Q25 50 50 30 T100 30 T150 30 T200 30 T250 30 T300 30 T350 30 T400 30" stroke="#fdd835" stroke-width="2" fill="none" opacity="0.6"/>
                         </svg>
+
+                        <!-- Linear EQ at bottom -->
+                        <div class="viz-eq-bottom">
+                            <span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
                     </div>
-                    <div class="eq-overlay">
-                        <span></span><span></span><span></span><span></span><span></span>
-                        <span></span><span></span><span></span><span></span><span></span>
-                    </div>
+
                     <div class="about-stat-overlay">
                         <strong>5.0</strong>
                         <span>Google Rated</span>
@@ -415,7 +442,7 @@
         <div class="container footer-grid">
             <div class="footer-brand">
                 <a href="#home" class="nav-logo">
-                    <img src="images/logo.png" alt="Xotic Auto Sound" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                    <img src="images/logo.svg" alt="Xotic Auto Sound" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
                     <div class="logo-text" style="display:none">
                         <span class="logo-name">Xotic</span>
                         <span class="logo-sub">Auto Sound</span>
