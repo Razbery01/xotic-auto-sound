@@ -52,7 +52,7 @@ function initSmoothScroll() {
             const target = document.querySelector(id);
             if (!target) return;
             e.preventDefault();
-            const offset = 78;
+            const offset = 200;
             const y = target.getBoundingClientRect().top + window.scrollY - offset;
             window.scrollTo({ top: y, behavior: 'smooth' });
         });
